@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<body style="background-color:LightSteelBlue;">
+		<script>
+		/* Написать функцию f(a,b), вычисляющую и возвращающую длину средней линии трапеции
+			по заданным длинам оснований a и b. Продемонстрировать работу для трёх трапеций.  */
+		"use strict"
+		let upper_base = Number(prompt("Введите длину верхнего основания")), 
+			lower_base = Number(prompt("Введите длину нижнего основания"));
+
+		function trapezoid_middle_line(a, b) {
+			let m = ((a + b) / 2);
+			return m;
+			}
+		console.group("Параметры трапеции");
+			console.log("Верхнее основание: " + upper_base);	
+			console.log("Нижнее основание: " + lower_base);
+			console.log("Средняя линяя:", trapezoid_middle_line(upper_base, lower_base));
+		console.groupEnd();
+			
+		</script> 
+	</body>
+</html>

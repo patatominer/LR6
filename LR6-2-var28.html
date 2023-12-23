@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<body style="background-color:LightSteelBlue;">
+		<script>
+		/* Написать функцию f(n), которая определяет и возвращает произведение 
+			чётных цифр натурального числа, полученного в качестве аргумента. */
+		
+		"use strict"
+		let number = Number(prompt("Введите число "));
+		function multiply_digits(n) {
+			n = String(n)
+			let result = 1, string_result = n[0];
+			for (let i = 0; i < n.length; i++) {
+				if (Number(n[i]) % 2 == 0) {
+					result = result * Number(n[i]);
+					if (i > 0) {
+						string_result += " * " + n[i];
+					}
+				}
+			}
+			if (result == 1) {
+				result = 0;
+				string_result = 0;
+			}
+			return (string_result + " = " + result);
+		}
+		console.log(number)
+		console.log(multiply_digits(number))
+		</script> 
+	</body>
+</html>
